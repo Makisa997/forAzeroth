@@ -1,0 +1,32 @@
+﻿@model forAzeroth.Models.MainModel
+@{
+    ViewBag.Title = "Uspesna prijava";
+}
+
+<div id="portfolio-wrapper" class="container">
+    <div class="title">
+        <h2>@Model.Profiles.Welcome()</h2>
+    </div>
+    <table border="1" align="center">
+        <tr>
+            <th>Name</th>
+            <th>CharacterName</th>
+            <th>Age</th>
+            <th>ClassName</th>
+            <th>Type of Player</th>
+        </tr>
+        <tr>
+            <td>@Model.Profiles.Name</td>
+            <td>@Model.Profiles.CharacterName</td>
+            <td>@Model.Profiles.Age</td>
+            <td>@Model.Profiles.ClassName</td>
+            <td>@Model.Profiles.TypeOfPlay</td>
+        </tr>
+    </table><center>
+    @{
+        string text = "Good Luck!!!";
+        @forAzeroth.Helpers.Helpers.ProfileHelper(@text);
+
+    }
+</center>
+</div>

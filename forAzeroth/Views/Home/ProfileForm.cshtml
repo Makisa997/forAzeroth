@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Prijavi se";
+}
+@model forAzeroth.Models.MainModel
+    <div id="page" class="container">
+        <div id="content" class="linija">
+            <div class="title">
+                <h2>Prijavi se za putovanje iz snova</h2>
+            </div>
+            @using (Html.BeginForm("Profile", "Home", FormMethod.Post))
+            {
+                <p>
+                    Name:<br />
+                    @Html.TextBoxFor(x => x.Profiles.Name)
+                </p>
+                <p>
+                    Age: <br />
+                    @Html.TextBoxFor(x => x.Profiles.Age)
+                </p>
+                <p>CharacterName: <br /></p>
+                <P>@Html.TextBoxFor(x => x.Profiles.CharacterName)</P>
+
+
+                <p>
+                    ClassName : <br />
+                    @Html.TextBoxFor(x => x.Profiles.ClassName)
+                </p>
+                <p>Type of player: <br /></p>
+                @Html.TextBoxFor(x => x.Profiles.TypeOfPlay)<br />
+                <input class="button" type="submit" value="Submit" />
+                <input class="button" type="reset" value="Reset" />
+            }
+            <br />
+            <br />
+            <span>Nakon što prosledite Vaše podatke bićete kontaktirani u najkraćem mogućem roku radi dodatnih informacija. </span>
+        </div>
+        <div id="sidebar">
+            <div class="box1">
+                <div class="title">
+                    <h2>Kako do nas?</h2>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2809.204008350608!2d19.840134115063822!3d45.2436672561534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b1013e72a1aa1%3A0x2f183c85e55d867b!2sBulevar%20oslobo%C4%91enja%20127%2C%20Novi%20Sad%2021000!5e0!3m2!1sen!2srs!4v1574639802981!5m2!1sen!2srs" width="300" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <br />
+                <br />
+                <address>
+                    Turistička agencija Atlas<br />
+                    Bulevar Oslobođenja 127 Novi Sad<br />
+                    <abbr>Telefon:</abbr><br />
+                    021/4582-657<br />
+                    <abbr>E-mail:</abbr><br />
+                    <a href="mailto:taatlas@outlook.com">taatlas@outlook.com</a>
+                </address><br />
+                <span>@ViewBag.Message</span>
+            </div>
+        </div>
